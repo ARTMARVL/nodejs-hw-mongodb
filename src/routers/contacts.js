@@ -1,3 +1,4 @@
+
 import { Router } from "express";
 import { getAllContactsController, getContactsByIdController, pingController } from "../controllers/contacts.js";
 import { ctrlWrapper } from "../utils/ctrlWrapper.js";
@@ -10,7 +11,9 @@ import { isValidId } from "../middlewares/isValidId.js";
 const router = Router();
 
 router.get('/', ctrlWrapper(pingController));
+
 router.get('/contacts', ctrlWrapper(getAllContactsController));
+
 router.get('/contacts/:id', isValidId, ctrlWrapper(getContactsByIdController));
 
 router.post('/contacts', validateBody(createContactSchema), ctrlWrapper(createContactController));
