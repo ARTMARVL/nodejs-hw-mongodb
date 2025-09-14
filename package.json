@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint src/**/*.js",
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +27,11 @@
     "eslint": "^9.35.0",
     "express": "^5.1.0",
     "mongoose": "^8.18.1",
-    "pino-http": "^10.5.0"
+    "pino-http": "^10.5.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "pino-pretty": "^13.1.1"
   }
 }
